@@ -13,10 +13,11 @@
     <img src="sravan.jpg" alt="Vudutha Sravan" class="profile-pic-header">
     <h1>Vudutha Sravan Kumar  </h1>
     <nav class="nav-menu">
-      <a href="#about"><button class="nav-button">About</button></a>
-      <a href="#skills"><button class="nav-button">Skills</button></a>
-      <a href="#projects.html"><button class="nav-button">Projects</button></a>
-      <a href="#contacts.html"><button class="nav-button">Contacts</button></a>
+        <a href="#about"><button class="nav-button">About</button></a>
+        <a href="#skills"><button class="nav-button">Skills</button></a>
+        <a href="#experience"><button class="nav-button">Experience</button></a>
+        <a href="#education"><button class="nav-button">Education</button></a>
+        <a href="#contact"><button class="nav-button">Contact</button></a>
     </nav>
   </div>
   </header>
@@ -53,6 +54,16 @@
         </div>
         </div>
       </li>
+      <li class="flip-card">
+        <div class="flip-card-inner" onclick="this.classList.toggle('flipped')">
+        <div class="flip-card-front">
+          AWS Cloud
+        </div>
+        <div class="flip-card-back">
+        <a href="clf-c02.pdf" target="_blank" class="cert-link">AWS Cloud (CLF-C02)</a>
+        </div>
+        </div>
+      </li>
       <li><span>API-led Connectivity</span></li>
       <li><span>Database Integration (MySQL, Oracle)</span></li>
       <li><span>Java</span></li>
@@ -63,11 +74,71 @@
       <li><span>Git, GitLab</span></li>
       <li><span>CloudHub, RTF</span></li>
       <li><span>DevOps (Jenkins, Docker Basics)</span></li>
-      <li><span>AWS Cloud (CLF-C02)</span></li>
       <li><span>HTML, CSS, JavaScript</span></li>
     </ul>
   </div>
 </section>
+    <!-- Experience & Projects Section -->
+    <section id="experience" class="projects-section">
+      <div class="projects-container">
+        <h1 class="section-title">Experience & Projects</h1>
+
+        <div class="project-card">
+          <h2>IBM (Client: Truist Bank) – Jan 2024 to Present</h2>
+          <p><strong>Role:</strong> Application Developer</p>
+          <ul>
+            <li>Developed and deployed APIs on RTF and CloudHub</li>
+            <li>Managed CI/CD pipelines via GitLab</li>
+            <li>Integrated backend Truist apps with secure APIs</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h2>PRIMUS Global (Client: Accenture/AT&T) – Jun 2023 to Jan 2024</h2>
+          <p><strong>Role:</strong> Mulesoft Developer</p>
+          <ul>
+            <li>Built contract, LOA, billing APIs integrated with Salesforce (LWC)</li>
+            <li>Used VIP connection and Object Store for async flows</li>
+            <li>Handled eSign document flows and API security</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h2>iBridge TechSoft (Client: HCA) – Aug 2022 to Jun 2023</h2>
+          <p><strong>Role:</strong> Mulesoft Developer</p>
+          <ul>
+            <li>Migrated IIB-based integrations to MuleSoft for hospital systems</li>
+            <li>Worked with MoveIT Automation and DataPower</li>
+            <li>Handled file-based data transfers and Oracle/IBM MQ connections</li>
+          </ul>
+        </div>
+
+        <div class="project-card">
+          <h2>Ovation Services Pvt Ltd – Aug 2016 to Apr 2022</h2>
+          <p><strong>Role:</strong> Engineer</p>
+          <p>Early-stage contributor to enterprise development using web and integration tools.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+      <div class="education-container">
+        <h1 class="section-title">Education</h1>
+        <p><strong>B.Tech</strong> in Computer Science from <strong>NallaMalla Reddy Engineering College</strong>, affiliated to <strong>JNTU University</strong> (Graduated in 2015)</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="contact-container">
+        <h1 class="section-title">Contact</h1>
+        <p><strong>Email:</strong> <a href="mailto:sravankumarv1103@gmail.com">sravankumarv1103@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91-9441437037</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vuduthasravan" target="_blank">vuduthasravan</a></p>
+        <p><a href="resume.pdf" download class="cert-link">Download Resume</a></p>
+      </div>
+    </section>
   </main>
   <footer>
   <div class="footer-container">
@@ -79,5 +150,13 @@
     </div>
   </div>
 </footer>
+
+ <script>
+    document.querySelectorAll('.flip-card-inner').forEach(card => {
+      card.addEventListener('click', () => {
+        setTimeout(() => card.classList.remove('flipped'), 6000);
+      });
+    });
+  </script>
 </body>
 </html>
