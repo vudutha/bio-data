@@ -21,10 +21,29 @@ header {
   flex-direction: column;
 }
 
+header h3{
+  color: navy;
+  margin: 2%;
+  text-align: center;
+}
+header p{
+  margin: 0%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+.hero-links{
+  margin: 1%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 .heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 100px; /* Adjust based on nav height */
+  text-align: center;
 }
 
 .profile-pic-header {
@@ -39,41 +58,44 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  margin: 10px 0 20px;
+  margin:  0;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Fix the navigation bar at the top */
 .nav-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white; /* optional: keep nav background visible */
+  z-index: 999; /* ensures it stays above all content */
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional: shadow for clarity */
 }
 
 .nav-button {
-  background-color: #ff9800;
+  padding: 10px 15px;
   border: none;
+  background-color: #0056b3;
   color: white;
-  padding: 10px 20px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: #f57c00;
-  color: #000;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #004494;
 }
+
 
 /* Main Content */
 main {
   padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
+  padding-top: 120px;
 }
 
 /* About Section */
@@ -268,4 +290,9 @@ footer {
 
 .footer-links a:hover {
   color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px; /* Adjust to height of your fixed nav */
 }
